@@ -21,6 +21,7 @@ cloud_service_port = 'http://'+ cloud_ip + ':5566'
 def handle(data):
     service = data.service_name
     action = data.action_name
+　　　　bridge_client. cloud_param_set('http://'+cloud_ip+'/cloud_service/set_param', ros_master_uri)
     url = cloud_service_port + '/cloud_service/' + service + '/' + action
     return bridge_client.cloud_service_request(url)
 

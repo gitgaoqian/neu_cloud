@@ -9,12 +9,8 @@ if "CLOUD_IP" not in os.environ:
     print "Can't find environment variable CLOUD_IP."
     sys.exit(1)
 
-if "ROS_MASTER_URI" not in os.environ:
-    print "Can't find environment variable ROS_MASTER_URI."
-    sys.exit(1)
 
 cloud_ip = os.environ['CLOUD_IP']
-ros_master_uri = os.environ['ROS_MASTER_URI']
 cloud_service_port = 'http://'+ cloud_ip + ':5566'
 
 
